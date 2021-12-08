@@ -1,5 +1,5 @@
-const {quickSort} = require("./quickSort");
-const {mergeSort} = require("./mergeSort");
+const {quickSort} = require("./utils/quickSort");
+const {mergeSort} = require("./utils/mergeSort");
 const {factorial} = require("./utils/factorial");
 
 class AClass {
