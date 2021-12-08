@@ -3,11 +3,11 @@ function quickSort(arr, left, right) {
     let r = right;
     let mid = arr[Math.floor((l + r) / 2)];
 
-    while(l < r) {
-        while(arr[l] < mid) {
+    while (l < r) {
+        while (arr[l] < mid) {
             ++l;
         }
-        while(arr[r] > mid) {
+        while (arr[r] > mid) {
             --r;
         }
         if (l <= r) {
@@ -15,7 +15,7 @@ function quickSort(arr, left, right) {
 
             arr[l] = arr[r];
             arr[r] = lNum;
-            
+
             ++l;
             --r;
         }

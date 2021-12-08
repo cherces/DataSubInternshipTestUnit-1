@@ -1,30 +1,30 @@
-const {quickSort} = require("./utils/quickSort");
-const {mergeSort} = require("./utils/mergeSort");
-const {factorial} = require("./utils/factorial");
+const { quickSort } = require("./utils/quickSort");
+const { mergeSort } = require("./utils/mergeSort");
+const { factorial } = require("./utils/factorial");
 
 class AClass {
     _numbers = []
 
-    constructor(n){
+    constructor(n) {
         if (this.constructor.name === 'AClass') {
             throw new Error(`${this.constructor.name}: can not create instance of abstract class`);
         }
 
         this.#fill(n)
     }
-    #fill(n){
-        for(let i = 0; i < n; ++i) {
-            this._numbers[i] = Math.round( 1 - 0.5 + Math.random() * (20 - 1 + 1) );
+    #fill(n) {
+        for (let i = 0; i < n; ++i) {
+            this._numbers[i] = Math.round(1 - 0.5 + Math.random() * (20 - 1 + 1));
         }
     }
-    factorial(arr){
+    factorial(arr) {
         return factorial(arr);
     }
-    sort(){}
+    sort() { }
 }
 
 class Class1 extends AClass {
-    
+
     sort() {
         if (this._numbers.length <= 1) {
             return this._numbers
@@ -34,7 +34,7 @@ class Class1 extends AClass {
         }
 
     }
-} 
+}
 class Class2 extends AClass {
     sort() {
         if (this._numbers.length <= 1) {
